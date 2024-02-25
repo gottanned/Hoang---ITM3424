@@ -32,9 +32,33 @@ img {
     box-sizing: content-box;
 }
 
+#guessButton {
+    background-color: #89CFF0;
+    border-color: #89CFF0;
+    border-width: thin;
+    transition: background-color 0.5s;
+    transition: border-width 0.5s;
+}
+
+#guessButton:hover {
+    background-color: #0096FF;
+}
+
+#resetButton {
+    background-color: #D22B2B;
+    color: white;
+    border-color: #D22B2B;
+    border-width: thin;
+    transition: background-color 0.5s;
+}
+
+#resetButton:hover {
+    background-color: #800020;
+}
+
+
 
 a {
-    
     color: #BE7535;
     padding:0% 1%;
 }
@@ -53,6 +77,47 @@ ul {
     list-style-type: square;
     list-style-position: revert;
     color: blueviolet;
+}
+
+
+.feedback-animation {
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    0% {
+        background-color: opaque;
+        
+    }
+    50% {
+        background-color: #DAA520;
+    }
+    100% {
+        background-color: opaque;
+        
+    }
+}
+
+.shake-animation {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-5px, 0);
+    }
+    50% {
+        transform: translate(5px, 0);
+    }
+    75% {
+        transform: translate(-5px, 0);
+    }
+    100% {
+        transform: translate(5px, 0);
+    }
 }
 
 @media screen and (min-width: 600px){
